@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
+export DH_OPTIONS
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 %:
 	dh $@
+
+override_dh_auto_install:
