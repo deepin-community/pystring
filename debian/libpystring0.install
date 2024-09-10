@@ -1,0 +1,1 @@
+.libs/lib*.so.* usr/lib/${DEB_HOST_MULTIARCH}/
